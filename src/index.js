@@ -38,7 +38,11 @@ function App() {
       >
         Next Page
       </button>
-      <pre>{currentPageData.map(d => JSON.stringify(d, null, 2))}</pre>
+      <ul>
+        {currentPageData.map((d, index) => (
+          <li key={d.id}>{d.email}</li>
+        ))}
+      </ul>
     </div>
   );
 }
